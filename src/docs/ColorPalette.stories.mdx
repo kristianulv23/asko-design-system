@@ -1,0 +1,20 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+import { color } from '../shared/styles';
+
+<Meta title="Design System/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="color.pale" subtitle="Pale" colors={[color.pale]} />
+  <ColorItem title="color.duck_egg_blue" subtitle="Duck Egg Blue" colors={[color.duck_egg_blue]} />
+  <ColorItem title="color.charcoal_grey:" subtitle="Grey" colors={[color.charcoal_grey]} />
+  <ColorItem title="color.light_grey_blue" subtitle="Blue" colors={[color.light_grey_blue]} />
+  <ColorItem
+    title="Monochrome"
+    colors={[
+      color.black
+    ]}
+  />
+</ColorPalette>
