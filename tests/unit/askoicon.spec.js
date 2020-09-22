@@ -3,10 +3,14 @@ import AskoIcon from "@/components/AskoIcon/AskoIcon.vue";
 
 describe("AskoIcon.vue", () => {
   it("renders props.label when passed", () => {
-    const label = "AskoIcon";
+    const icon = "arrow_left";
+    const generateViewBox = jest.fn()
     const wrapper = shallowMount(AskoIcon, {
-      propsData: { label }
+      propsData: { icon },
+      methods: {
+        generateViewBox
+      }
     });
-    expect(wrapper.text()).toMatch(label);
+    expect(generateViewBox).toBeCalledWith("arrow_left");
   });
 });

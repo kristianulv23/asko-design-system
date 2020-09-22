@@ -1,11 +1,5 @@
 <template>
-  <asko-svg
-    :id="name"
-    :viewBox="viewBox"
-    :height="height"
-    :block="block"
-    version="1.1"
-  >
+  <asko-svg :id="name" :viewBox="viewBox" :height="height" :block="block" version="1.1">
     <title>{{ name }}</title>
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
       <g fill="#000000" fill-rule="nonzero">
@@ -50,6 +44,13 @@ export default {
       default: 20
     }
   },
+  methods: {
+    generateViewBox(icon) {
+      const svg = document.getElementById(icon);
+      const box = svg.getBBox();
+      this.viewBox = [box.x, box.y, box.width, box.height].join(" ");
+    }
+  },
   computed: {
     path() {
       return icons[this.icon].path;
@@ -59,9 +60,7 @@ export default {
     }
   },
   mounted() {
-    const svg = document.getElementById(`${this.name}`);
-    const box = svg.getBBox();
-    this.viewBox = [box.x, box.y, box.width, box.height].join(" ");
+    this.generateViewBox(this.icon)
   }
 };
 </script>
