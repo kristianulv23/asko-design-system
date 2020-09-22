@@ -1,3 +1,5 @@
+[![Build Status](https://kulvund.visualstudio.com/asko-design-system/_apis/build/status/kristianulv23.asko-design-system?branchName=master)](https://kulvund.visualstudio.com/asko-design-system/_build/latest?definitionId=3&branchName=master)
+
 # asko-storybook
 
 ## Clone project
