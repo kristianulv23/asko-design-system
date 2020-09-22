@@ -1,0 +1,47 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Design System/Intro" />
+
+# Get started
+
+Asko Storybook is a reusable component library that helps developers build UIs faster. The goal is to make building durable UIs more productive and satisfying.
+
+## Install
+
+Add Asko Storybook package to your project.
+
+`npm install --save @fortedigital/{PACKAGE_NAME}@{PACKAGE_VERSION}`
+
+### **Use**
+
+Import components you want into your UI
+
+`import { AskoButton } from ‘@fortedigital/askobutton;`
+
+and use them like so
+
+```
+<template>
+  <div class="someclass">
+    <AskoButton label="Button" size="medium" backgroundColor="blue" @onClick="getBaseURI($event)"/>
+    OR
+    <asko-button label="Button" size="medium" backgroundColor="lightgreen" @onClick="getBaseURI($event)"></asko-button>
+  </div>
+</template>
+
+<script>
+  import { AskoButton } from "@fortedigital/askobutton";
+
+  export default {
+    name: "App", 
+    components: {
+      AskoButton,
+    },
+    methods: {
+      getBaseURI: function (event) {
+        alert(event.target.baseURI)
+      }
+    }
+  };
+  </script>
+```

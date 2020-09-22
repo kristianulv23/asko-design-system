@@ -1,10 +1,14 @@
 {
   "name": "asko-design-system",
   "version": "0.1.0",
-  "main": "dist/index.js",
+  "main": "dist/asko.common.js",
+  "repository": "https://github.com/fortedigital/asko-design-system.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name asko ./src/index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006 -c .storybook watch-css -s ./src",

@@ -18,7 +18,6 @@
 <script>
 import { AskoSvg, AskoPath } from "./style";
 import { icons } from "../../shared/icons";
-import { color } from "../../shared/styles";
 
 export default {
   name: "AskoIcon",

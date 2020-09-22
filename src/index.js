@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import App from './App.vue'
+import * as styles from "./shared/styles";
+import * as icons from "./shared/icons";
 
-Vue.config.productionTip = false
+export { styles, icons };
 
-new Vue({
-  render: h => h(App)
-}).$mount('#app')
+export * from "./components/AskoButton";
+export * from "./components/AskoIcon";
+export * from "./components/AskoMessage";
